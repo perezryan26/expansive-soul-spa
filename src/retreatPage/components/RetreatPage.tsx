@@ -1,7 +1,10 @@
+import BasePage from "@/base/components/BasePage";
 import RetreatPageContent from "./RetreatPageContent";
 
 export default function RetreatPage() {
     return (
-        <RetreatPageContent />
+        <BasePage>
+            <RetreatPageContent />
+        </BasePage>
     );
 }

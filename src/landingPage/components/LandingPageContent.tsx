@@ -1,10 +1,17 @@
-import { Button } from "@/components/ui/button";
+import BasePage from "@/base/components/BasePage";
+import useWindowDimensions from "@/helper/hooks/useWindowDimensions";
 
 export default function LandingPageContent() {
+    const { size } = useWindowDimensions();
+
     return (
-        <div className="">
-            <h1>this is where the content goes</h1>
-            <Button> Testing shadcn button</Button>
-        </div>
+        <BasePage>
+            <div className="w-[100vw] h-[500px] mr-[300px] bg-blue-500">
+                <div >
+                    <h1>Expansive Soul</h1>
+                    <h1>Current window size {`width: ${size.width} height: ${size.height}`}</h1>
+                </div>
+            </div>
+        </BasePage>
     );
 }
